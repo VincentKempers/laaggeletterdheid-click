@@ -32,7 +32,7 @@ header {
 
 header > h2 {
   text-align: center;
-  font-size:3em;
+  font-size: 3em;
 }
 
 main > aside {
@@ -56,15 +56,31 @@ main > h3 {
   text-align: center;
 }
 
+main > section {
+  background-color: orange;
+  padding: 2em;
+  display: flex;
+  transition: background-color 1s ease-in;
+}
+
 
 main > section > a {
   color: black;
   text-decoration: none;
+
 }
 
-main > section > a > article {
-  background-color: orange;
-  padding: 2em;
+main > section:hover, main > section:hover > a > article > p{
+  background-color:white;
+  color:black;
+  transition: background-color 1s ease-in;
+}
+
+main > section > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
