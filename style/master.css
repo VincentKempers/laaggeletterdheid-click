@@ -1,3 +1,8 @@
+:root{
+ --orange-main: #ff6900;
+ --orange-secundar: #ffbb86;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -8,21 +13,22 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 1.4em;
+  background-color:var(--orange-main);
 }
 
-nav ul {
+nav > ul {
   display: flex;
   align-items: right;
   list-style: none;
 }
 
-nav ul li {
+nav > ul > li {
   margin-right: 2em;
 }
 
 header {
   display: flex;
-  background-color: orange;
+  background-color: var(--orange-secundar);
   height: 15em;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +46,8 @@ main > aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 4rem 0;
 }
 
 main {
@@ -57,23 +65,31 @@ main > h3 {
 }
 
 main > section {
-  background-color: orange;
+  background-color: white;
   padding: 2em;
+  margin: 0;
   display: flex;
-  transition: background-color 1s ease-in;
+  -webkit-box-shadow: 0px 1px 23px 0px rgba(0,0,0,0.10);
+  transition: background-color, margin .5s ease-in;
 }
 
 
 main > section > a {
-  color: black;
   text-decoration: none;
-
 }
 
-main > section:hover, main > section:hover > a > article > p{
-  background-color:white;
-  color:black;
-  transition: background-color 1s ease-in;
+main > section:hover{
+  background-color:var(--orange-secundar);
+  box-shadow: 4px 4px 4px 4px black;
+  -webkit-box-shadow: 0px 1px 23px 0px rgba(0,0,0,0.20);
+  -moz-box-shadow:  0px 1px 23px 0px rgba(0,0,0,0.20);
+  box-shadow:  0px 1px 23px 0px rgba(0,0,0,0.20);
+  z-index: +1;
+  margin: 20px 0;
+  transition: all .3s ease-in;
+}
+main > section:hover > a > article > p {
+  transition: all .3s ease-in;
 }
 
 main > section > a {
@@ -85,6 +101,6 @@ main > section > a {
 
 
 main > section a article > p {
-  color: white;
+  color:black;
   max-width: 25em;
 }
