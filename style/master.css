@@ -73,7 +73,6 @@ main > section {
   transition: background-color, margin .5s ease-in;
 }
 
-
 main > section > a {
   text-decoration: none;
 }
@@ -88,6 +87,7 @@ main > section:hover{
   margin: 20px 0;
   transition: all .3s ease-in;
 }
+
 main > section:hover > a > article > p {
   transition: all .3s ease-in;
 }
@@ -103,4 +103,23 @@ main > section > a {
 main > section a article > p {
   color:black;
   max-width: 25em;
+}
+
+
+.choices {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.choices > li {
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  box-shadow: 2px 1px 10px 1px rgba(0,0,0,0.10);
+}
+
+.choices > li > article {
+  padding: 1em;
 }
