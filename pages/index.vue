@@ -23,11 +23,10 @@
           GitHub
         </a>
         <a
-          href="/about"
           class="button--grey">
-          <Nuxt>
+          <nuxt-link to="/about">
           About
-        </Nuxt>
+          </nuxt-link>
         </a>
       </div>
     </div>
